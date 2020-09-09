@@ -1,8 +1,8 @@
 resource "aws_instance" "jenkins-instance" {
   ami = var.ami-amazon
   instance_type = "t2.micro"
-  key_name = var.keyname
-
+  #key_name = var.keyname
+  key_name = var.tmp-key
   subnet_id = var.public-subnet
   vpc_security_group_ids = ["sg-064e815cb0507f634"]
   user_data = file("install_jenkins.sh")
@@ -12,3 +12,27 @@ resource "aws_instance" "jenkins-instance" {
     Name = "Jenkins-instance"
   }
 }
+
+resource "aws_instance" "tomcat-instance" {
+  ami = var.ami-amazon
+  instance_type = "t2.micro"
+  #key_name = var.keyname
+  key_name = var.tmp-key
+  subnet_id = var.public-subnet
+  vpc_security_group_ids = ["sg-064e815cb0507f634"]
+  user_data = file("install_tomcat.sh")
+
+  associate_public_ip_address = true
+  tags = {
+    Name = "Tomcat-instance"
+  }
+}
+
+
+output "Jenkins-instance" {
+  value = aws_instance.jenkins-instance.public_dns
+}
+output "Tomcat-instance" {
+  value = aws_instance.tomcat-instance.public_dns
+}
+
