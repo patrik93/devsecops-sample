@@ -28,7 +28,7 @@ pipeline{
         stage('Deploy to tomcat isntance'){
             steps{
                 sshagent(['ec2-user']){
-                    sh 'scp -o StrictHostKeyChecking=no target/java-tomcat-maven-example.war ec2-user@ec2-63-35-172-11.eu-west-1.compute.amazonaws.com:/webapp/apache-tomcat-8.5.57/webapps/webapp.war'
+                    sh 'scp -o StrictHostKeyChecking=no target/java-tomcat-maven-example.war ec2-user@ec2-34-244-169-84.eu-west-1.compute.amazonaws.com:/webapp/apache-tomcat-8.5.57/webapps/webapp.war'
                 }
             }
         }
