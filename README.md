@@ -6,3 +6,8 @@ Infrasructure made with Terraform with Amazon Web Services. The project will con
     ZAP
     An open source SAST (not specified yet)
     A sample application (not specified yet)
+
+
+TODO:
+Jenkins setup guide with plugins and credentials (sshagent, sonarqube)
+Sonarqube setup guide, quality gate setups on vulnerable code.
