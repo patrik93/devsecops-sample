@@ -10,4 +10,4 @@ Infrasructure made with Terraform with Amazon Web Services. The project will con
 
 TODO:
 Jenkins setup guide with plugins and credentials (sshagent, sonarqube)
-Sonarqube setup guide
+Sonarqube setup guide, quality gate setups on vulnerable code.
