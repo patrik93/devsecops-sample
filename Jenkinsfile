@@ -26,7 +26,7 @@ pipeline{
             }
         }
 
-         }
+
         stage('Deploy to tomcat isntance'){
             steps{
                 sshagent(['ec2-user']){
@@ -41,6 +41,7 @@ pipeline{
                 }
 
              }
+         }
 
     }
 }
