@@ -25,13 +25,22 @@ pipeline{
                 sh 'mvn clean package'
             }
         }
+
+         }
         stage('Deploy to tomcat isntance'){
             steps{
                 sshagent(['ec2-user']){
-                    sh 'scp -o StrictHostKeyChecking=no target/java-tomcat-maven-example.war ec2-user@ec2-34-244-169-84.eu-west-1.compute.amazonaws.com:/webapp/apache-tomcat-8.5.57/webapps/webapp.war'
+                    sh 'scp -o StrictHostKeyChecking=no target/java-tomcat-maven-example.war ec2-user@ec2-63-33-191-164.eu-west-1.compute.amazonaws.com:/webapp/apache-tomcat-8.5.57/webapps/webapp.war'
                 }
             }
         }
+         stage('DAST'){
+             steps{
+                sshagent(['ec2-user']){
+                    sh 'ssh -o StrictHostKeyChecking=no ec2-user@ec2-3-249-153-237.eu-west-1.compute.amazonaws.com "docker run -t owasp/dependency-check zap-baseline.py -t http://ec2-63-33-191-164.eu-west-1.compute.amazonaws.com:8080/webapp"'
+                }
+
+             }
 
     }
 }
