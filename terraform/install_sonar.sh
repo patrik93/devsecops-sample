@@ -1,9 +1,9 @@
 
 #!/bin/bash
-echo "Install Docker engine"
+echo "install docker engine"
 sudo yum update -y
 sudo yum install docker -y
-sudo usermod -a -G docker ec2-user
+sudo usermod -a -g docker ec2-user
 chkconfig docker on
 service docker start
 
