@@ -37,7 +37,7 @@ pipeline{
          stage('DAST'){
              steps{
                 sshagent(['ec2-user']){
-                    sh 'ssh -o StrictHostKeyChecking=no ec2-user@ec2-3-249-153-237.eu-west-1.compute.amazonaws.com "docker run -t owasp/owasp/zap2docker-stable zap-baseline.py -t http://ec2-63-33-191-164.eu-west-1.compute.amazonaws.com:8080/webapp"'
+                    sh 'ssh -o StrictHostKeyChecking=no ec2-user@ec2-3-249-153-237.eu-west-1.compute.amazonaws.com "docker run -t owasp/zap2docker-stable zap-baseline.py -t http://ec2-63-33-191-164.eu-west-1.compute.amazonaws.com:8080/webapp"'
                 }
 
              }
