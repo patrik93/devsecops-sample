@@ -34,7 +34,7 @@
 <h3>SonarQube</h3>
 <ol>    
     <li>You can access to SonarQube server with the DNS provided by Terraform output with the addition of port 9000 e.g. http://sonar-dns:9000. The default login and password is admin:admin.</li>
-    <li>To generate a token, to go User > My Account > Security. Your existing tokens are listed here, each with a Revoke button.
+    <li>To generate a token, to go <i>User > My Account > Security</i>. Your existing tokens are listed here, each with a Revoke button.
         
 The form at the bottom of the page allows you to generate new tokens. Once you click the Generate button, you will see the token value. Copy it immediately; once you dismiss the notification you will not be able to retrieve it. This token will be used in Jenkins.</li>
 </ol>
