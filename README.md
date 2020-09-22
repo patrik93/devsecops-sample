@@ -26,19 +26,19 @@
 <p>Starting infrastructure described in Terraform template will cost $0.05 per hour. SonarQube not able to run on t2.micro free tier eligible instance due to low resources. Every other components of the project is free tier eligible.</p>
 
 <h2>Setup</h2>
-<p>Terraform</p>
+<h3>Terraform</h3>
 <ol>    
     <li>After Terraform template applied, you can access created instances with the Terraform output information from the CLI:</li>
     <img src="https://github.com/patrik93/devsecops-sample/blob/master/images/terraform-apply-output?raw=true" alt="Terraform output message">
 </ol>
-<p>SonarQube</p>
+<h3>SonarQube</h3>
 <ol>    
     <li>You can access to SonarQube server with the DNS provided by Terraform output with the addition of port 9000 e.g. http://sonar-dns:9000. The default login and password is admin:admin.</li>
     <li>To generate a token, to go User > My Account > Security. Your existing tokens are listed here, each with a Revoke button.
         
 The form at the bottom of the page allows you to generate new tokens. Once you click the Generate button, you will see the token value. Copy it immediately; once you dismiss the notification you will not be able to retrieve it. This token will be used in Jenkins.</li>
 </ol>
-    <p>Jenkins</p>
+<h3>Jenkins</h3>
 <ol>    
     <li>You can access Jenkins server by using the printed DNS of started Jenkins server and adding the default port to the url: e.g. http://jenkins-dns:8080</li>
     <li>When you accessed the Web UI, follow the instructions and chose <i>"Install suggested plugins"</i> option.</li>
