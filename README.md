@@ -19,14 +19,20 @@
     <p>You can skip these steps if you have already configured Terraform with your AWS account on your machine.</p>
     <li>Setup Terraform on your machine: https://learn.hashicorp.com/tutorials/terraform/install-cli </li>
     <li>Add you AWS account following: https://learn.hashicorp.com/tutorials/terraform/aws-build</li>
+    <li>Create AWS ssh key and add its name to the terraform/variables.tf "keyname" variable.
 </ol>
 
 <h2>Warning</h2>
 <p>Starting infrastructure described in Terraform template will cost $0.05 per hour. SonarQube not able to run on t2.micro free tier eligible instance due to low resources. Every other components of the project is free tier eligible.</p>
 
 <h2>Setup</h2>
-
-
+<ul>
+    <li>You can access created instances with the Terraform output information</li>
+    <img src="https://github.com/patrik93/devsecops-sample/blob/master/images/terraform-apply-output?raw=true" alt="Terraform output message">
+    <li></li>
+    <li></li>
+    <li></li>
+</ul>
 
 <h2>TODO:</h2>
 <ul>
