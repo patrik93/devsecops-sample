@@ -33,22 +33,23 @@
 </ol>
 <p>SonarQube</p>
 <ol>    
-    <li></li>
+    <li>You can access to SonarQube server with the DNS provided by Terraform output with the addition of port 9000 e.g. http://sonar-dns:9000. The default login and password is admin:admin.</li>
+    <li>To generate a token, to go User > My Account > Security. Your existing tokens are listed here, each with a Revoke button.
+        
+The form at the bottom of the page allows you to generate new tokens. Once you click the Generate button, you will see the token value. Copy it immediately; once you dismiss the notification you will not be able to retrieve it. This token will be used in Jenkins.</li>
 </ol>
     <p>Jenkins</p>
 <ol>    
     <li>You can access Jenkins server by using the printed DNS of started Jenkins server and adding the default port to the url: e.g. http://jenkins-dns:8080</li>
     <li>When you accessed the Web UI, follow the instructions and chose <i>"Install suggested plugins"</i> option.</li>
-    <li>At the home page of Jenkins go to "Manage Jenkins" -> "Manage Plugins". On the Available tab, search for "SSH Agent" and "SonarQube Scanner" plugins and install them without restart.</li>
-    <li>In the credential store, add new credentials ("Manage Jenkins" -> "Manage Credentials"). <p><img src="https://github.com/patrik93/devsecops-sample/blob/master/images/add-creds-jenkins.png" alt="Add credentials to Jenkins"></p></li>
+    <li>At the home page of Jenkins go to <i>"Manage Jenkins"-> "Manage Plugins"</i>. On the Available tab, search for "SSH Agent" and "SonarQube Scanner" plugins and install them without restart.</li>
+    <li>In the credential store, add new credentials (<i>"Manage Jenkins" -> "Manage Credentials"</i>). <p><img src="https://github.com/patrik93/devsecops-sample/blob/master/images/add-creds-jenkins.png" alt="Add credentials to Jenkins"></p></li>
     <li>Add the ssh key into the credentials shown the picture below. <p><img src="https://github.com/patrik93/devsecops-sample/blob/master/images/add-ssh-key.png" alt="Add SSH key creds to Jenkins"></p></li>
-    <li>Add the SonarQube access token key into the credentials shown the picture below. <p><img src="https://github.com/patrik93/devsecops-sample/blob/master/images/sonarqube-server-token.png" alt="Add SonarQube access key creds to Jenkins"></p></li>
+    <li>Add the SonarQube access token key (created in SonarQube section) into the credentials shown the picture below. <p><img src="https://github.com/patrik93/devsecops-sample/blob/master/images/sonarqube-server-token.png" alt="Add SonarQube access key creds to Jenkins"></p></li>
     <li></li>
     <li>At the home page click on New item type your pipeline name e.g. "first-pipeline" and select Pipeline type for your item.</li>
-    <li>In the Pipeline section select "Pipeline from SCM" from the Definition drop-down list and add your repository address, where your Jenkinsfile located. Click on save.</li>
-    <li>At the "Manage Jenkins" -> "Configure System" scroll to the SonarQube servers section. Make sure, you checked "Environment variables". At the Server authentication token choose the previously added credentials. <p><img src="https://github.com/patrik93/devsecops-sample/blob/master/images/add-sonarqube-jenkins.png" alt="Add SonarQube server to Jenkins"></p></li>
-    <li></li>
-    <li></li>
+    <li>In the Pipeline section select <i>"Pipeline from SCM"</i> from the Definition drop-down list and add your repository address, where your Jenkinsfile located. Click on save.</li>
+    <li>At the <i>"Manage Jenkins" -> "Configure System"</i> scroll to the SonarQube servers section. Make sure, you checked <i>"Environment variables"</i>. At the Server authentication token choose the previously added credentials. <p><img src="https://github.com/patrik93/devsecops-sample/blob/master/images/add-sonarqube-jenkins.png" alt="Add SonarQube server to Jenkins"></p></li>
 </ol>
 
 
