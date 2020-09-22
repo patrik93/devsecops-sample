@@ -26,13 +26,27 @@
 <p>Starting infrastructure described in Terraform template will cost $0.05 per hour. SonarQube not able to run on t2.micro free tier eligible instance due to low resources. Every other components of the project is free tier eligible.</p>
 
 <h2>Setup</h2>
-<ul>
-    <li>You can access created instances with the Terraform output information</li>
+<p>Terraform</p>
+<ol>    
+    <li>After Terraform template applied, you can access created instances with the Terraform output information from the CLI:</li>
     <img src="https://github.com/patrik93/devsecops-sample/blob/master/images/terraform-apply-output?raw=true" alt="Terraform output message">
+</ol>
+<p>SonarQube</p>
+<ol>    
+    <li></li>
+</ol>
+    <p>Jenkins</p>
+<ol>    
+    <li>You can access Jenkins server by using the printed DNS of started Jenkins server and adding the default port to the url: e.g. http://jenkins-dns:8080</li>
+    <li>When you accessed the Web UI, follow the instructions and chose <i>"Install suggested plugins"</i> option.</li>
+    <li>At the home page of Jenkins go to "Manage Jenkins" -> "Manage Plugins". On the Available tab, search for "SSH Agent" and "SonarQube Scanner" plugins and install them without restart.</li>
+    <li>At the home page click on New item type your pipeline name e.g. "first-pipeline" and select Pipeline type for your item.</li>
+    <li>In the Pipeline section select "Pipeline from SCM" from the Definition drop-down list and add your repository address, where your Jenkinsfile located. Click on save.</li>
+    <li>At the "Manage Jenkins" -> "Configure System" scroll to the SonarQube servers section. Make sure, you checked "Environment variables"</li>
     <li></li>
     <li></li>
-    <li></li>
-</ul>
+</ol>
+
 
 <h2>TODO:</h2>
 <ul>
