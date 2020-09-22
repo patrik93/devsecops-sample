@@ -40,9 +40,12 @@
     <li>You can access Jenkins server by using the printed DNS of started Jenkins server and adding the default port to the url: e.g. http://jenkins-dns:8080</li>
     <li>When you accessed the Web UI, follow the instructions and chose <i>"Install suggested plugins"</i> option.</li>
     <li>At the home page of Jenkins go to "Manage Jenkins" -> "Manage Plugins". On the Available tab, search for "SSH Agent" and "SonarQube Scanner" plugins and install them without restart.</li>
+    <li>Add the ssh key into the credentials shown the picture below. <p><img src="https://github.com/patrik93/devsecops-sample/blob/master/images/add-cred-jenkins.png" alt="Add SSH key creds to Jenkins"></p></li>
+    <li>Add the SonarQube access token key into the credentials shown the picture below. <p><img src="https://github.com/patrik93/devsecops-sample/blob/master/images/sonarqube-server-token.png" alt="Add SonarQube access key creds to Jenkins"></p></li>
+    <li></li>
     <li>At the home page click on New item type your pipeline name e.g. "first-pipeline" and select Pipeline type for your item.</li>
     <li>In the Pipeline section select "Pipeline from SCM" from the Definition drop-down list and add your repository address, where your Jenkinsfile located. Click on save.</li>
-    <li>At the "Manage Jenkins" -> "Configure System" scroll to the SonarQube servers section. Make sure, you checked "Environment variables"</li>
+    <li>At the "Manage Jenkins" -> "Configure System" scroll to the SonarQube servers section. Make sure, you checked "Environment variables". At the Server authentication token choose the previously added credentials. <p><img src="https://github.com/patrik93/devsecops-sample/blob/master/images/add-sonarqube-jenkins.png" alt="Add SonarQube server to Jenkins"></p></li>
     <li></li>
     <li></li>
 </ol>
