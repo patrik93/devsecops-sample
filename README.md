@@ -54,6 +54,11 @@ The form at the bottom of the page allows you to generate new tokens. Once you c
 
 <h2>TODO list:</h2>
 
-1. [x] Jenkins setup guide with plugins and credentials (sshagent, sonarqube)
-2. [x] Sonarqube setup guide, quality gate setups on vulnerable code.
-3. [ ] Jenkinsfile customization
+1. [x] Jenkins setup guide with plugins and credentials (SSH Agent, SonarQube).
+2. [x] Add SonarQube as Static Application Security Testing (SAST).
+2. [x] SonarQube setup guide.
+3. [ ] SonarQube Quality Gate setups to break build if the code is vulnerable.
+3. [ ] Terraform modification for complete infrastructure (SG, Subnets etc.).
+4. [ ] Add Source Compositon Analysis (SCA) solution to the project.
+5. [x] Add ZAP to the project as Dynamic Application Security Testing (DAST).
+6. [ ] Deployment to any container environment instead of a single Tomcat host.
