@@ -52,8 +52,8 @@ The form at the bottom of the page allows you to generate new tokens. Once you c
 </ol>
 
 
-<h2>TODO:</h2>
-<ul>
-    <li>Jenkins setup guide with plugins and credentials (sshagent, sonarqube)</li>
-    <li>Sonarqube setup guide, quality gate setups on vulnerable code.</li>
-</ul>
+<h2>TODO list:</h2>
+
+1. [x] Jenkins setup guide with plugins and credentials (sshagent, sonarqube)
+2. [x] Sonarqube setup guide, quality gate setups on vulnerable code.
+3. [ ] Jenkinsfile customization
