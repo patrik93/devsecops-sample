@@ -62,3 +62,4 @@ The form at the bottom of the page allows you to generate new tokens. Once you c
 4. [ ] Add Source Compositon Analysis (SCA) solution to the project.
 5. [x] Add ZAP to the project as Dynamic Application Security Testing (DAST).
 6. [ ] Deployment to any container environment instead of a single Tomcat host.
+7. [ ] Container security solution integration in the pipeline.
